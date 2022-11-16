@@ -1,13 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-import psycopg2
-from psycopg2.extras import RealDictCursor
-import time
 from .config import settings
 
 
-#sqlalchemy_Database_URL = "postgresql://<username>:<password>@<ip-address/hostname>:<port>/<database_name>"
+#sqlalchemy_Database_URL = f"postgresql://<username>:<password>@<ip-address/hostname>:<port>/<database_name>"
 sqlalchemy_Database_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
 engine = create_engine(sqlalchemy_Database_URL)

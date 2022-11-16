@@ -1,6 +1,3 @@
-from ast import Expression
-from email.policy import default
-from tkinter import CASCADE
 from sqlalchemy import TIMESTAMP, Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.sql.expression import text
 from .database import Base

@@ -1,4 +1,3 @@
-from wsgiref import headers
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from . import schema, models, database
